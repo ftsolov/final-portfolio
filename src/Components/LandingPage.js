@@ -4,6 +4,9 @@ import pic from "../media/personal-pic.jpg";
 import linkedinIcon from "../media/linkedin.svg";
 import twitterIcon from "../media/twitter.svg";
 import behanceIcon from "../media/behance.svg";
+import heroArrow from "../media/heroArrow.svg";
+import meArrow from "../media/meArrow.svg";
+import ctaArrow from "../media/ctaArrow.svg";
 
 window.addEventListener("load", () => {
   document.querySelector("body").classList.add("loaded");
@@ -12,11 +15,15 @@ window.addEventListener("load", () => {
 const LandingPage = () => {
   return (
     <div className="landing">
-      <div className="main-section">
-        <img src={pic} alt="Me" className="photo" />
+      <div className="main-section" id="main-section">
+        <div className="photo-container">
+          <img src={pic} alt="Me" className="photo" />
+          <img src={meArrow} alt="" className="me-arrow"/>
+        </div>
         <div className="hero-text">
-          <h1>Hola, my name is Filip.</h1>
+          <h1>Hola, my name is Filip. <span className="wave">👋</span></h1>
           <h1>I am a product designer & front-end developer.</h1>
+          <img src={heroArrow} alt="" className="hero-arrow" />
         </div>
         <div className="buttons">
           <a href="#">
@@ -86,6 +93,7 @@ const LandingPage = () => {
             <svg className="button-stroke" viewBox="0 0 154 13">
               <use href="#line"></use>
             </svg>
+            <img src={ctaArrow} alt="" className={"cta-arrow"} />
             Contact
           </a>
         </div>
